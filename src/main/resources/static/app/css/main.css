@@ -1,0 +1,297 @@
+html, body, #portals {
+	font-family: Helvetica, Arial, 'Microsoft YaHei', sans-serif;
+	overflow: hidden;
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+iframe {
+	display: block;
+}
+.topframe {
+	position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 1000;
+    margin: 0;
+    padding-left: 15px;
+    padding-right: 15px;
+    text-align: center;
+    border-radius: 0;
+}
+.topframe.alert-warning {
+    border-bottom: 1px solid #faebcc;
+}
+.topframe.alert-danger {
+    border-bottom: 1px solid #ebccd1;
+}
+.router-wrapper {
+	position: absolute;
+	top: 50px;
+	bottom: 0;
+	width: 100%;
+	overflow: auto;
+}
+.router-wrapper .router-wrapper {
+	top: 0;
+}
+.router-wrapper .navbar + .router-wrapper{
+	top: 50px;
+}
+.view {
+	position: relative;
+	height: 100%;
+	background: #fff;
+	-webkit-transition: all .7s ease-in-out;
+	-moz-transition: all .7s ease-in-out;
+	transition: all .7s ease-in-out;
+}
+.scale-down-center-enter, .scale-down-center-leave {
+	opacity: 0;
+	-webkit-transform: scale(.7);
+	-moz-transform: scale(.7);
+	transform: scale(.7);
+}
+.navbar {
+    margin-bottom: 0;
+	border: none;
+	border-radius: 0;
+}
+.home-container {
+	background-image: url("../img/bg.jpg");
+	background-size: 100% 100%;
+	overflow: auto;
+}
+.navbar-home {
+	background: transparent;
+	border-bottom: 1px solid #38bdff;
+}
+.navbar-home .navbar-brand {
+    height: auto;
+    padding: 30px;
+    line-height: 30px;
+    font-size: 24px;
+    color: #fff;
+}
+.navbar-home .navbar-brand:hover{
+    color: #fff;
+}
+.navbar-home .navbar-form {
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+.navbar-home .navbar-text {
+	margin-right: 15px;
+	margin-top: 35px;
+	color: #fff;
+}
+.menu-list {
+	padding-top: 25px;
+}
+.menu {
+	margin-bottom: 30px;
+}
+.menu .menu-icon {
+	width: 120px;
+	height: 120px;
+	margin: 0 auto 20px;
+	background-image: url("../img/icon-sprite.png");
+	cursor: pointer;
+}
+.menu .menu-icon:hover {
+	-webkit-transform: rotate(360deg);
+	-moz-transform: rotate(360deg);
+	-ms-transform: rotate(360deg);
+	transform: rotate(360deg);
+	-webkit-transition: all 1s linear;
+	-moz-transition: all 1s linear;
+	transition: all 1s linear;
+}
+.menu .monitor-icon {
+	background-position: 0 0;
+}
+.menu .work-icon {
+	background-position: 0 -130px;
+}
+.menu .duty-icon {
+	background-position: 0 -260px;
+}
+.menu .consult-icon {
+	background-position: 0 -390px;
+}
+.menu .analysis-icon {
+	background-position: 0 -520px;
+}
+.menu .flood-icon {
+	background-position: 0 -650px;
+}
+.menu .drought-icon {
+	background-position: 0 -780px;
+}
+.menu .report-icon {
+	background-position: 0 -910px;
+}
+.menu .config-icon {
+	background-position: 0 -1040px;
+}
+.menu span {
+	margin-bottom: 10px;
+	font-size: 18px;
+	line-height: 1.1;
+	color: #fff;
+	cursor: pointer;
+}
+
+.navbar-expand {
+	background-color: #0866a5;
+}
+.navbar-expand .navbar-brand {
+	font-weight: bold;
+	display: block;
+	float: none;
+	color: #fff;
+}
+.navbar-expand .back-home {
+	margin: -35px 80px 0 80px;
+}
+.navbar-expand .back-home-arrow {
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	cursor: pointer;
+	background: url("../img/back-home.png");
+	background-size: 100% 100%;
+}
+.navbar-expand .navbar-nav > li > a {
+	color: white;
+}
+.navbar-nav {
+	position: relative;
+	overflow: hidden;
+}
+.navbar-nav li {
+	z-index: 1;
+}
+.navbar-nav li.active {
+	background: #2391db;
+}
+.navbar-expand .navbar-nav > li.active > a, .navbar-expand .navbar-nav > li > a:hover, .navbar-expand .navbar-nav > li > a:focus {
+	background: none;
+}
+.navbar-expand .navbar-nav li.slide-mask {
+	background: #2391db;
+	opacity: .4;
+}
+.navbar-nav li.slide-mask {
+	position: absolute;
+	z-index: 0;
+	bottom: 0;
+	left: -86px;
+	width: 86px;
+	height: 50px;
+	-webkit-transition: transform .3s;
+	-moz-transition: transform .3s;
+	transition: transform .3s;
+}
+.form-control[readonly] {
+	background-color: #fff;
+}
+
+.list-inline li {
+	cursor: pointer;
+}
+.list-inline li.active {
+	background-color: #46b8da;
+    color: #fff;
+    border-radius: 3px;
+}
+
+.aside .fixed-table-container {
+	border: none;
+	border-radius: 0;
+}
+
+.infowindow div {
+	-webkit-box-sizing: content-box;
+	-moz-box-sizing: content-box;
+	box-sizing: content-box;
+}
+.infowindow .user .titlebar .hide {
+	display: block !important;
+}
+
+.ztree li span.switch {
+	margin-top: 4px;
+}
+.ztree li span.button.chk {
+	margin-top: 4px;
+}
+.ztree * {
+	font-size: 13px;
+}
+.ztree li a {
+	padding: 5px 3px 0 0;
+}
+.ztree li a.curSelectedNode {
+	padding-top: 4px;
+	height:22px;
+}
+.popover {
+	z-index: 1000;
+}
+
+.wangEditor-container .wangEditor-txt blockquote {
+	border-left: none;
+	background-color: transparent;
+}
+
+/*legend style*/
+.legend-list {
+	padding: 10px 15px;
+	line-height: 2;
+	font-size: .9em;
+	text-align: right;
+}
+
+.legend-list .legend-item {
+	overflow: hidden;
+}
+
+.legend-list .legend-item .legend-label {
+	float: left;
+	text-align: justify;
+	text-align-last: justify;
+}
+
+.legend-list .legend-label span {
+	display: inline-block;
+	width: 20px; 
+	height: 15px; 
+	vertical-align: middle; 
+	border: 1px solid #ccc;
+}
+
+.legend-list .legend-item .legend-value {
+	display: block;
+	overflow: hidden;
+	word-break: normal;
+	word-wrap: break-word;
+}
+
+.esriPopup .outerPointer.left {
+	left: 15px;
+}
+
+.esriPopup .actionsPane .action.zoomTo,
+.esriPopup .titleButton.maximize {
+	display: none;
+}
+/*布局*/
+.flexv{display:flex; display:-webkit-flex; flex-direction:column;}
+.flexh{display:flex; display:-webkit-flex; flex-direction:row;}
+.flex1{flex:1;flex-basis: 0;}
+.noflow{overflow:hidden;}
+
+.border1{border:1px solid silver;}

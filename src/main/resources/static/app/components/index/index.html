@@ -1,0 +1,47 @@
+<div id='app'>
+	<el-container style="border: 1px solid #eee">
+	  <el-aside width="200px" style="background-color: rgb(238, 241, 246)">
+	    <!--导航菜单-->
+		<el-menu :default-active="$route.path" class="el-menu-vertical-demo "
+				 unique-opened='false' router 
+				 background-color="#545c64"
+			     text-color="#fff"
+			     active-text-color="#ffd04b">
+			<template v-for="(item,index) in $router.options.routes">
+				<!-- <el-submenu :index="index+''" v-if="!item.leaf">
+					<template slot="title"><i :class="item.iconCls"></i><span slot="title">{{item.name}}</span></template>
+					<el-menu-item v-for="child in item.children" :index="child.path" :key="child.path" v-if="!child.hidden" :disabled="child.disabled">
+						<div @click="clickMenu($event,child)">{{child.name}}</div>
+					</el-menu-item>
+				</el-submenu>
+				<el-menu-item v-if="item.leaf&&item.children.length>0" :index="item.children[0].path" :disabled="item.children[0].disabled">
+					<i :class="item.iconCls"></i>
+					<span style="display: inline-block;width: 100%;" @click="clickMenu($event,item.children[0])">{{item.children[0].name}}</span>
+				</el-menu-item> -->
+				
+				<el-submenu :index="index">
+					<template slot="title">
+			          <i :class="item.iconCls"></i>
+			          <span>{{item.name}}</span>
+			        </template>
+			        <el-menu-item v-for="child in item.children" :index="child.path" 
+			        	:key="child.path" :disabled="child.disabled">
+			        	<div @click="clickMenu($event,child)">{{child.name}}</div>
+			        </el-menu-item>
+				</el-submenu>
+			</template>
+		</el-menu>
+	    
+	  </el-aside>
+	  	
+	  <el-container>
+	    <el-header style="text-align: right; font-size: 12px">
+	      <span>王小虎</span>
+	    </el-header>
+	    
+	    <el-main>
+	      <router-view></router-view>
+	    </el-main>
+	  </el-container>
+	</el-container>
+</div>

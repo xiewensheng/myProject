@@ -1,0 +1,80 @@
+body,html{
+	width:100%;height:100%;margin:0;padding:0;
+}
+body{
+	background:url(../img/bg2.jpg) no-repeat;
+	overflow:hidden;background-size: cover;
+}
+#main{
+	width:100%;height:571px;background:#002E48 url(../img/back0.png) repeat-x center center;
+	position:absolute;top:150px;
+}
+#main #maindiv{
+	width:1280px;height:571px;margin:0 auto;background:url(../img/back.png) no-repeat center center;
+	position: relative;
+}
+
+#main #maindiv #mainform{
+	width:996px;height:319px;background:url(../img/formback.png) no-repeat;
+	position:absolute;top:85px;left:0;right:0;margin:auto;
+}
+
+#loginform{position:absolute;right:30px;width:338px;top:70px;}
+
+#footer{
+	position:fixed;
+	bottom:0;
+	width:100%;
+	padding:10px;
+	color:#eee;
+	text-align:center;
+	font-weight:normal;
+	font-size:14px;text-decoration: none;
+}
+#footer a:link{color:#eee;}
+
+
+.formRow{
+	height:35px;
+	position:relative;padding:10px 0;
+}
+
+.label{
+	float:left;
+	padding:0 20px 0 0;
+	text-align:right;
+	width:70px;
+/* 	box-sizing:null;
+	-webkit-box-sizing:null; */
+}
+
+label{
+	font-family:Century Gothic,Myriad Pro,Arial,Helvetica,sans-serif;
+	font-size:16px;
+	letter-spacing:1px;
+	line-height:35px;
+	color: black;
+}
+.field{
+	float:left;
+}
+
+.field input{
+	/* The text boxes */
+	
+	width: 220px;
+	color:#666666;
+	font-family:Arial,Helvetica,sans-serif;
+	font-size:22px;
+	padding:4px 5px;
+	/*border:1px solid white;background:url("../img/box_bg.png") repeat-x scroll left top #FFFFFF;
+	outline:none;*/
+}
+
+#submit{border:none;background:url(../img/loginbg.png);width:85px;height:39px;
+	margin:20px 0 0 90px;cursor:pointer;}
+#regedit{border:none;background:url(../img/regeditbg.png);width:85px;height:39px;
+	margin:20px 0 0 15px;cursor:pointer;}
+.modal-body{
+	text-align:center;
+}

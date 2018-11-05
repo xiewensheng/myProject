@@ -1,0 +1,4 @@
+html,body{margin:0;padding:0;height:100%;}
+
+.frameworkTop{position:fixed;height:50px;background:#09C;}
+.frameworkBody{position:absolute;top:50px;bottom:0;left:0;right:0;}

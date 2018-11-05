@@ -1,0 +1,13 @@
+[
+{"name":"菜单1","path":"/","component":"components/index/index","id":"1","pid":"0","iconCls":"el-icon-star-on","type":"100"},
+{"name":"菜单1-1","path":"/org","component":"components/test1/test","id":"1.2","pid":"1","iconCls":"el-icon-message","type":"100","disabled":"true"},
+{"name":"菜单1-2","path":"/post","component":"components/test/test","id":"1.3","pid":"1","iconCls":"el-icon-message","type":"100","disabled":"true"},
+{"name":"菜单1-3","path":"/role","component":"components/test1/test","id":"1.4","pid":"1","iconCls":"el-icon-message","type":"100","disabled":"true"},
+
+{"name":"菜单2","path":"/","component":"components/index/index","id":"2","pid":"0","iconCls":"el-icon-upload","type":"100"},
+{"name":"菜单2-1","path":"/app","component":"components/test1/test","id":"1.3","pid":"2","type":"100"},
+{"name":"菜单2-2","path":"/data","component":"components/test/test","id":"1.4","pid":"2","type":"100"},
+{"name":"菜单2-3","path":"/update","component":"components/test1/test","id":"1.5","pid":"2","type":"100"},
+{"name":"菜单2-4","path":"/sta","component":"components/test/test","id":"1.7","pid":"2","type":"100"}
+
+]
