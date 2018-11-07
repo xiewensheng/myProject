@@ -2,6 +2,7 @@ package com.wjw.graduationproject.controller;
 
 import com.wjw.graduationproject.entity.Audience;
 import com.wjw.graduationproject.entity.User;
+import com.wjw.graduationproject.repository.BaseRepository;
 import com.wjw.graduationproject.repository.UserRepository;
 import com.wjw.graduationproject.util.JwtHelper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,6 +24,9 @@ public class TestController {
   @Autowired
   private UserRepository userRepository;
 
+  @Autowired
+  private BaseRepository<User> baseRepository;
+
   @RequestMapping("/searchUser/{username}")
   public List<User> searchUser(@PathVariable("username") String username) {
     List<User> result = this.userRepository.findByUsernameContaining(username);
@@ -40,5 +44,20 @@ public class TestController {
   @RequestMapping(value = "/test",method = RequestMethod.GET)
   public String test() {
     return "TEST Successful!:";
+  }
+
+  @RequestMapping("/testSearch")
+  public User testSearch(){
+    return baseRepository.findFirstBySql("select * from user where username=?",User.class,new Object[]{"xws"});
+  }
+
+  @RequestMapping("/testSearch2")
+  public List<User> testSearch2(){
+    return baseRepository.findBySql("select * from user where username=?",new Object[]{"xws"});
+  }
+
+  @RequestMapping("/testinsert")
+  public int testInsert1(){
+    return baseRepository.updateBySql("insert into user (username,userpwd) values (?,?)",new Object[]{"test","test"});
   }
 }
